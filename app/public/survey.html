@@ -1,220 +1,127 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-  </head>
-  <body>
- 
-    <div class="container">
+<head>
+  <title>Survey</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- <script src="survey.js"></script> -->
 
-        <h2>Survey Questions</h2>
-        <h3><b>About You</b></h3>
-        <h4>Name (Required)</h4>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 
-        <br>
+</head>
 
-        <input class="form-control" type="text" placeholder="Default input">
-        <input class="form-control" type="text" placeholder="Default input">
+<body>
+  <div class="container">
+    <form id="surveyForm">
+      <h2>Survey Questions</h2>
+      <hr>
+      <label for="inputName">Your name (required)</label>
+      <input type="text" class="form-control col-md-6" id="inputName" placeholder="Jane Doe" required>
 
-        <br>
+      <label for="imageLink">Link to photo image</label>
+      <input type="text" class="form-control col-md-6" id="imageLink" placeholder="URL" required>
 
-        <h4>Question 1</h4>
-        <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-        <br>
-
-        <h4>Question 2</h4>
-        <p>Generally speaking, you rely more on your experience than your imagination.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
+      <div id="questionsDiv">
+        <!--Questions dynamically generate here-->
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-primary" id="submitSurveyBtn">Submit</button>
+    </form>
 
 
-        <br>
-
-        <h4>Question 3</h4>
-        <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-
-        <br>
-
-        <h4>Question 4</h4>
-        <p>You rarely do something just out of sheer curiosity.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-
-        <br>
-
-        <h4>Question 5</h4>
-        <p>People can rarely upset you.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-
-        <br>
-
-        <h4>Question 6</h4>
-        <p>It is often difficult for you to relate to other people’s feelings.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-
-        <br>
-
-        <h4>Question 7</h4>
-        <p>In a discussion, truth should be more important than people’s sensitivities.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-
-        <br>
-
-        <h4>Question 8</h4>
-        <p>You rarely get carried away by fantasies and ideas.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-
-        <br>
-
-        <h4>Question 9</h4>
-        <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-
-        <br>
-
-        <h4>Question 10</h4>
-        <p>You feel more energetic after spending time with a group of people.</p>
-        <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                </div>
-              </div>
-
-
+    <!--Match modal-->
+    <div class="modal" id="matchModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Best matched friend!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="false">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="matchInfo">
+              <!--match name appears here-->
+            </p>
+            <span id="matchImageSpan">
+              <!--match image appears here--></span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-  </body>
+  <!-- ================================================================= -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      function writeQuestions() {
+        var questions = [
+          "1) You would own a house full of cats if possible.",
+          "2) You would try a ghost pepper.",
+          "3) Good looks are important to you.",
+          "4) Family is very important.",
+          "5) You love expensive places.",
+          "6) You want to get married soon.",
+          "7) Brushing your teeth sould be done after every meal.",
+          "8) World dominance is important.",
+          "9) If you had the chance to shoot hitler when he was a baby you would take it.",
+          "10) Apple is better than Android."
+        ];
+
+        for (const question of questions) {
+          $("#questionsDiv").append(
+            $("<div class='row'>").append(
+              $("<div class='col-md-12'>").append(
+                $("<p>").text(question),
+                $("<select class='custom-select custom-select-sm col-md-2'>").append(
+                  $("<option selected>Select an option</option>"),
+                  $("<option value='1'>1 (Strongly disagree)</option>"),
+                  $("<option value='2'>2</option>"),
+                  $("<option value='3'>3</option>"),
+                  $("<option value='4'>4</option>"),
+                  $("<option value='5'>5 (Strongly agree)</option>")
+                )
+              )
+            )
+          );
+        }
+      }
+
+      writeQuestions();
+
+      $("#surveyForm").on("submit", function (event) {
+        event.preventDefault();
+        const newFriend = {
+          name: $("#inputName").val().trim(),
+          photo: $("#imageLink").val().trim(),
+          scores: $(".custom-select").map(function () {
+            return $(this).val();
+          }).get()
+        };
+
+        $.post("/api/friends", newFriend)
+          .then(function (data) {
+            $("#matchInfo").text(data.name);
+            $("#matchImageSpan").empty().append($("<img>").attr("src", data.photo));
+            $("#matchModal").modal("toggle");
+          });
+      });
+    });
+  </script>
+</body>
+
 </html>
