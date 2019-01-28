@@ -1,127 +1,258 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Survey</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <!-- <script src="survey.js"></script> -->
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 </head>
 
 <body>
+
   <div class="container">
-    <form id="surveyForm">
-      <h2>Survey Questions</h2>
-      <hr>
-      <label for="inputName">Your name (required)</label>
-      <input type="text" class="form-control col-md-6" id="inputName" placeholder="Jane Doe" required>
 
-      <label for="imageLink">Link to photo image</label>
-      <input type="text" class="form-control col-md-6" id="imageLink" placeholder="URL" required>
+    <h2>Survey Questions</h2>
+    <hr>
 
-      <div id="questionsDiv">
-        <!--Questions dynamically generate here-->
+    <h3><strong>About You</strong></h3>
+    <h4>Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required>
+
+    <h4>Link to Photo Image (Required)</h4>
+    <input type="text" id="photo" class="form-control" required>
+
+    <hr>
+
+    <h4>1) You would own a house full of cats if possible.</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>2) You would eat a ghost pepper.</h4>
+    <select class="chosen-select" id="q2">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>3) Good looks are important to you.</h4>
+    <select class="chosen-select" id="q3">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>4) Family is very important.</h4>
+    <select class="chosen-select" id="q4">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>5) You love expensive places.</h4>
+    <select class="chosen-select" id="q5">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>6) You want to get married soon.</h4>
+    <select class="chosen-select" id="q6">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>7) Brushing your teeth sould be done after every meal.</h4>
+    <select class="chosen-select" id="q7">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>8) World dominance is important.</h4>
+    <select class="chosen-select" id="q8">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>9) If you had the chance to shoot Hitler when he was a baby you would take it.</h4>
+    <select class="chosen-select" id="q9">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4>10) Apple is better than Android.</h4>
+    <select class="chosen-select" id="q10">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <br>
+    <br>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+        aria-hidden="true"></i>
+      Submit</button>
+
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
       </div>
-      <hr>
-      <button type="submit" class="btn btn-primary" id="submitSurveyBtn">Submit</button>
-    </form>
+    </footer>
 
+  </div>
 
-    <!--Match modal-->
-    <div class="modal" id="matchModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Best matched friend!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="false">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p id="matchInfo">
-              <!--match name appears here-->
-            </p>
-            <span id="matchImageSpan">
-              <!--match image appears here--></span>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+  <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+
     </div>
   </div>
 
-  <!-- ================================================================= -->
+  <script type="text/javascript">
+    // Chosen CSS
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Oops, nothing found!"
+      },
+      ".chosen-select-width": {
+        width: "95%"
+      }
+    };
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function () {
-      function writeQuestions() {
-        var questions = [
-          "1) You would own a house full of cats if possible.",
-          "2) You would try a ghost pepper.",
-          "3) Good looks are important to you.",
-          "4) Family is very important.",
-          "5) You love expensive places.",
-          "6) You want to get married soon.",
-          "7) Brushing your teeth sould be done after every meal.",
-          "8) World dominance is important.",
-          "9) If you had the chance to shoot hitler when he was a baby you would take it.",
-          "10) Apple is better than Android."
-        ];
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
 
-        for (const question of questions) {
-          $("#questionsDiv").append(
-            $("<div class='row'>").append(
-              $("<div class='col-md-12'>").append(
-                $("<p>").text(question),
-                $("<select class='custom-select custom-select-sm col-md-2'>").append(
-                  $("<option selected>Select an option</option>"),
-                  $("<option value='1'>1 (Strongly disagree)</option>"),
-                  $("<option value='2'>2</option>"),
-                  $("<option value='3'>3</option>"),
-                  $("<option value='4'>4</option>"),
-                  $("<option value='5'>5 (Strongly agree)</option>")
-                )
-              )
-            )
-          );
-        }
+    // Capture the form inputs
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function () {
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
       }
 
-      writeQuestions();
-
-      $("#surveyForm").on("submit", function (event) {
-        event.preventDefault();
-        const newFriend = {
-          name: $("#inputName").val().trim(),
-          photo: $("#imageLink").val().trim(),
-          scores: $(".custom-select").map(function () {
-            return $(this).val();
-          }).get()
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
         };
 
-        $.post("/api/friends", newFriend)
-          .then(function (data) {
-            $("#matchInfo").text(data.name);
-            $("#matchImageSpan").empty().append($("<img>").attr("src", data.photo));
-            $("#matchModal").modal("toggle");
-          });
-      });
+        // AJAX post the data to the friends API.
+        $.post("/api/friends", userData, function (data) {
+
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+
+          // Show the modal with the best match
+          $("#results-modal").modal("toggle");
+
+        });
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
     });
   </script>
+
 </body>
 
 </html>

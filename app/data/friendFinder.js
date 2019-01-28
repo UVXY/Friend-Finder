@@ -64,23 +64,23 @@ var friendsArray = [{
 }
 ]; 
 
-  compatibleArray = []
+//   compatibleArray = []
 
-  function compatibilaty (user) {
-      var bestMatch = 0;
-      var bestObject;
+//   function compatibilaty (user) {
+//       var bestMatch = 0;
+//       var bestObject;
 
-      for (i = 0; i < friendsArray.length; i++){
-          var matchDifference = 0;
-          for (var j = 0; j < friendsArray[i]; j++) {
-            matchDifference += Math.abs(friendsArray[i].scores[j] - user.scores[j]); 
-          }
-          if (bestMatch < matchDifference || bestMatch === null) {
-              bestMatch = matchDifference;
-              bestObject = friendsArray[i];
-          }
-      }
-      return bestObject;
-  }
+//       for (i = 0; i < friendsArray.length; i++){
+//           var matchDifference = 0;
+//           for (var j = 0; j < friendsArray[i]; j++) {
+//             matchDifference += Math.abs(friendsArray[i].scores[j] - user.scores[j]); 
+//           }
+//           if (bestMatch < matchDifference || bestMatch === null) {
+//               bestMatch = matchDifference;
+//               bestObject = friendsArray[i];
+//           }
+//       }
+//       return bestObject;
+//   }
 
-  module.exports = { friendsArray, compatibilaty };
+  module.exports = friendsArray ;
